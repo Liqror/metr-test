@@ -8,6 +8,6 @@ export class ConfigService {
     const isError = false;
     return isError
       ? throwError(() => new Error('Backend failed')).pipe(delay(500))
-      : of({ counterId: 99999999 }).pipe(delay(500));
+      : of({ counterId: 106805475 }).pipe(delay(500));
   }
 }

@@ -3,11 +3,11 @@ import { MetrikaService } from './metrika.service';
 
 @Injectable()
 export class FallbackMetrikaService extends MetrikaService {
-  init(counterId?: number): void {
-    console.log('FallbackMetrikaService init called', counterId);
+  init() {
+    console.log('⚠ Metrika disabled');
   }
 
-  reachGoal(goal?: string): void {
-    console.log('FallbackMetrikaService reachGoal called', goal);
+  reachGoal(goal: string) {
+    console.log('⚠ Goal skipped (metrika disabled):', goal);
   }
 }

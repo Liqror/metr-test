@@ -19,10 +19,9 @@ import { ConfigService } from './services/config.service';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  // private metrika: MetrikaService;
+  constructor(private metrika: MetrikaService) {}
 
-  constructor(private configService: ConfigService) {
-    // по умолчанию fallback
-    // this.metrika = new FallbackMetrikaService();
+  sendGoal() {
+    this.metrika.reachGoal('test_button_click');
   }
 }
